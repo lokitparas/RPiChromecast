@@ -69,9 +69,3 @@ The following keys are being written to stdout:
 * **screen\_id**: The screen ID will be generated if not passed by -s flag. If you want to keep connected devices over restarts, generate it first and pass it from then on.
 * **lounge\_token, option\_sid, option\_gsessionid**: API internals
 
-## Roadmap / TODO
-* dbus interface (for YouTube specific commands as well as connecting to MPRIS supported players)
-* testing
-* video duration
-* autoplay
-* subtitles

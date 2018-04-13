@@ -1,5 +1,5 @@
-# gotubecast
-gotubecast is a small Go program which you can use to make your own YouTube TV player.
+# RPiChromecast
+RPiChromecast is a small Go program which you can use to make your own YouTube TV player.
 
 It connects to the YouTube Leanback API and generates a text stream providing pairing codes, video IDs,
 play/pause/seek/volume change commands etc. It doesn't have any dependencies and runs on any of the platforms supported by golang.
@@ -9,16 +9,16 @@ extension for your favorite media center software.
 ## Build + Install
 Provided you have [golang correctly set up](https://golang.org/doc/install):
 
-    go get github.com/CBiX/gotubecast
+    go get github.com/lokitparas/RPiChromecast
 
 ## Run
 With default options:
 
-    gotubecast
+    RPiChromecast
 
 Minimal dumb YouTube TV example (opens every video in a new browser window, no control possible):
 
-    gotubecast -n "Dumb TV" -i dumb-v1 | while read line
+    RPiChromecast -n "Dumb TV" -i dumb-v1 | while read line
     do
         cmd="`cut -d ' ' -f1 <<< "$line"`"
         arg="`cut -d ' ' -f2 <<< "$line"`"
@@ -37,8 +37,8 @@ Minimal dumb YouTube TV example (opens every video in a new browser window, no c
 
 Usage help:
 
-	$ gotubecast -h
-	Usage of ./gotubecast:
+	$ RPiChromecast -h
+	Usage of ./RPiChromecast:
 	  -d int
 			Debug information level. 0 = off; 1 = full cmd info; 2 = timestamp prefix, this changes the output format!
 	  -i string
